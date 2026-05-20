@@ -6,7 +6,7 @@ const StoryModal = ({ story, entrepreneur, product, onClose }) => {
   return createPortal(
     <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4" onClick={onClose}>
       <div 
-        className="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto relative" 
+        className="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto scrollbar-none relative" 
         onClick={(e) => e.stopPropagation()}
       >
         <button 
@@ -85,7 +85,7 @@ const ProductCard = ({ product, entrepreneur }) => {
           />
           
           {product.videoUrl && (
-            <div className="absolute bottom-3 left-3 bg-white/90 text-[#1A1A1A] px-3 py-1 text-[10px] tracking-[0.1em] uppercase">
+            <div className="absolute bottom-3 left-3 bg-black/80 text-white px-3 py-1 text-[10px] tracking-[0.1em] uppercase">
               Film
             </div>
           )}

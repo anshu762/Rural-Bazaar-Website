@@ -70,3 +70,12 @@
 .price-slider.min-slider {
   z-index: 3;
 }
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
