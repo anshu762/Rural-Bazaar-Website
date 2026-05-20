@@ -4,16 +4,16 @@ import { products, entrepreneurs } from '../lib/constants';
 import ProductCard from '../components/custom-components/ProductCard.jsx';
 
 const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }) => (
-  <div className="flex flex-wrap justify-center gap-3 mb-10">
+  <div className="flex flex-wrap justify-center gap-2 mb-16">
     {['All', ...categories].map((category) => (
       <button
         key={category}
         onClick={() => onSelectCategory(category)}
-        className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base
+        className={`px-5 py-2.5 text-xs tracking-[0.08em] uppercase transition-all duration-500
           ${selectedCategory === category
-            ? 'bg-[#8A6F58] text-white shadow-lg transform scale-105'
-            : 'bg-white text-[#8A6F58] hover:bg-[#C8A07D] hover:text-white border border-[#C8A07D]'
-          }`}
+            ? 'bg-black text-white border-black'
+            : 'bg-transparent text-[#6B6B6B] hover:text-black border-[#E3DFD7] hover:border-black'
+          } border`}
       >
         {category}
       </button>
@@ -54,21 +54,23 @@ const HomePage = () => {
     : null;
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#8A6F58] mb-2">
+    <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
+      <div className="text-center mb-16">
+        <p className="text-xs tracking-[0.2em] uppercase text-[#9C9C9C] mb-6">The Collection</p>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light tracking-[-0.03em] text-[#1A1A1A] mb-4 leading-[1.1]">
           Handcrafted with Heart
         </h1>
-        <p className="text-lg text-[#4F4A45] max-w-2xl mx-auto">
+        <p className="text-base md:text-lg font-light text-[#6B6B6B] max-w-xl mx-auto leading-relaxed">
           Discover unique products made by talented women from rural communities. Every purchase empowers a dream.
         </p>
+        <div className="w-8 h-[1px] bg-[#1A1A1A]/20 mx-auto mt-8" />
       </div>
 
       {entrepreneurFilterName && (
-        <div className="text-center mb-8 bg-[#C8A07D]/10 p-4 rounded-lg">
-          <h2 className="text-xl font-semibold text-[#8A6F58]">
-            Showing products by {entrepreneurFilterName}
-          </h2>
+        <div className="text-center mb-12 border border-[#E3DFD7] px-6 py-4">
+          <p className="text-xs tracking-[0.1em] uppercase text-[#6B6B6B]">
+            Curated edit &mdash; <span className="text-[#1A1A1A]">{entrepreneurFilterName}</span>
+          </p>
         </div>
       )}
 
@@ -79,7 +81,7 @@ const HomePage = () => {
       />
 
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {filteredProducts.map((product) => {
             const entrepreneur = entrepreneurMap.get(product.entrepreneurId);
             return entrepreneur ? (
@@ -92,8 +94,8 @@ const HomePage = () => {
           })}
         </div>
       ) : (
-        <div className="text-center py-16">
-          <p className="text-xl text-gray-500">
+        <div className="text-center py-24">
+          <p className="text-sm tracking-[0.05em] text-[#9C9C9C]">
             No products found for this selection.
           </p>
         </div>
