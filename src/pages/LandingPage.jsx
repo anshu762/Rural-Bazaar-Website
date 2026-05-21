@@ -35,14 +35,25 @@ const LandingPage = () => {
     <div className="bg-[#FAF9F6] text-[#1A1A1A]">
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-black">
-        <Motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.5 }}
-          transition={{ duration: 1.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(https://photos.smugmug.com/Story-photos/i-QF3JkdL/0/S/01_IN_RAJ201312245041%20bazaar-S.jpg)' }}
-        />
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-black overflow-hidden">
+        <div className="absolute inset-0">
+          {['herosection.jpg', 'herosection2.jpg', 'herosection3.jpg', 'herosection4.jpg'].map((img, i) => (
+            <Motion.div
+              key={img}
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(/${img})` }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 1, 0] }}
+              transition={{
+                duration: 16,
+                ease: 'easeInOut',
+                repeat: Infinity,
+                delay: i * 4,
+                times: [0, 0.15, 0.7, 0.85],
+              }}
+            />
+          ))}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-24 md:py-32">
           <Motion.p
