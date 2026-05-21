@@ -1,101 +1,114 @@
 import React from 'react';
 import { EmailIcon, WhatsAppIcon } from '../components/custom-components/icons';
 
-const InfoCard = ({ title, children }) => (
-  <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 transform hover:scale-105 transition-transform duration-300">
-    <h3 className="text-xl md:text-2xl font-serif font-bold text-[#8A6F58] mb-4">{title}</h3>
-    <div className="space-y-3 text-[#4F4A45] text-base md:text-lg leading-relaxed">{children}</div>
+const FadeInSection = ({ children, delay = 0 }) => (
+  <div
+    className="animate-fade-in-up"
+    style={{ animationDelay: `${delay}ms` }}
+  >
+    {children}
   </div>
 );
 
 const AboutPage = () => {
   return (
-    <div className="max-w-5xl mx-auto space-y-12 md:space-y-16">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#8A6F58] mb-4">Our Story</h1>
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-          Sharing our journey, our mission, and the inspiration behind Rural Bazaar.
-        </p>
-      </div>
+    <div className="bg-black text-white min-h-screen">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-16 lg:px-24 py-24 md:py-32 lg:py-40">
 
-      {/* Vision & Mission Section */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-        <div className="order-2 md:order-1">
-          <InfoCard title="Vision & Mission">
-            <p>
-              Our mission is to create a self-sustaining, digital platform that showcases products made by women-led rural microbusinesses. We aim to offer them visibility, basic e-commerce access, and support them through storytelling and digital literacy resources.
+        <FadeInSection delay={0}>
+          <h1 className="text-[clamp(3rem,10vw,8rem)] font-light leading-[0.9] tracking-[-0.04em] text-white mb-8 max-w-5xl">
+            Our<br />Story
+          </h1>
+        </FadeInSection>
+
+        <FadeInSection delay={150}>
+          <div className="w-16 h-[1px] bg-white/30 mb-16" />
+        </FadeInSection>
+
+        <FadeInSection delay={300}>
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 mb-24">
+            <p className="text-sm md:text-base leading-[1.8] tracking-[0.01em] text-white/70 max-w-md">
+              Rural Bazaar began with a simple observation &mdash; extraordinary talent,
+              limited reach. Women in rural communities possess generations of
+              craftsmanship, yet remain invisible to the markets that would value
+              their work. This gap became our purpose.
             </p>
-          </InfoCard>
-        </div>
-        <div className="order-1 md:order-2">
-          <img
-            src="https://picsum.photos/seed/vision/600/400"
-            alt="Vision"
-            className="rounded-lg shadow-xl w-full h-auto"
-          />
-        </div>
-      </div>
-
-      {/* Founder's Story Section */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-        <div>
-          <img
-            src="https://picsum.photos/seed/founder/600/400"
-            alt="Founder"
-            className="rounded-lg shadow-xl w-full h-auto"
-          />
-        </div>
-        <div>
-          <InfoCard title="Founder's Story">
-            <p>
-              I started Rural Bazaar after witnessing the incredible talent and resilience of women in my ancestral village. Despite their skill, they lacked access to larger markets. I wanted to bridge this gap, using technology to connect their artistry with the world, ensuring they receive the recognition and financial independence they deserve.
+            <p className="text-sm md:text-base leading-[1.8] tracking-[0.01em] text-white/70 max-w-md">
+              We build more than a marketplace. We build visibility, dignity, and
+              economic independence. Every product tells a story of skill, patience,
+              and the quiet determination of women turning their craft into livelihood.
+              This is slow commerce &mdash; intentional, personal, and human.
             </p>
-          </InfoCard>
-        </div>
-      </div>
+          </div>
+        </FadeInSection>
 
-      {/* How It Works Section */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-        <div className="order-2 md:order-1">
-          <InfoCard title="How It Works">
-            <p>
-              Rural Bazaar is more than a marketplace; it's a community. We feature products and share the stories of the entrepreneurs. Customers can browse our catalog and connect directly with the makers via WhatsApp for a personal and transparent purchasing experience.
-            </p>
-          </InfoCard>
-        </div>
-        <div className="order-1 md:order-2">
-          <img
-            src="https://picsum.photos/seed/howitworks/600/400"
-            alt="How it works"
-            className="rounded-lg shadow-xl w-full h-auto"
-          />
-        </div>
-      </div>
+        <FadeInSection delay={450}>
+          <div className="flex flex-col sm:flex-row gap-6 mb-32">
+            <a
+              href="mailto:divenachugani@gmail.com"
+              className="group inline-flex items-center gap-3 px-0 py-3 text-sm font-medium tracking-[0.15em] uppercase text-white/80 hover:text-white transition-all duration-500 border-b border-white/20 hover:border-white"
+            >
+              <EmailIcon className="w-4 h-4" />
+              <span>Email Us</span>
+            </a>
+            <a
+              href="https://wa.me/919154126880"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 px-0 py-3 text-sm font-medium tracking-[0.15em] uppercase text-white/80 hover:text-white transition-all duration-500 border-b border-white/20 hover:border-white"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </FadeInSection>
 
-      {/* Get In Touch Section */}
-      <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center">
-        <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#8A6F58] mb-4">Get In Touch</h3>
-        <p className="text-base md:text-lg text-gray-600 mb-6">
-          We'd love to hear from you for inquiries or collaborations.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8">
-          <a
-            href="mailto:divenachugani@gmail.com"
-            className="flex items-center space-x-2 text-[#8A6F58] hover:text-[#C8A07D] transition-colors"
-          >
-            <EmailIcon />
-            <span className="font-semibold">Email Us</span>
-          </a>
-          <a
-            href="https://wa.me/919154126880"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-[#8A6F58] hover:text-[#C8A07D] transition-colors"
-          >
-            <WhatsAppIcon />
-            <span className="font-semibold">Connect on WhatsApp</span>
-          </a>
-        </div>
+        <FadeInSection delay={600}>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-32">
+            <div className="md:col-span-7 overflow-hidden group">
+              <img
+                src="https://photos.smugmug.com/Story-photos/i-tN9FqDv/0/S/04_IN_RAJ201312244966%20bulls-S.jpg"
+                alt="Rural life"
+                className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
+              />
+            </div>
+            <div className="md:col-span-5 overflow-hidden group">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Surunga_haat6.JPG"
+                alt="Local marketplace"
+                className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
+              />
+            </div>
+            <div className="md:col-span-5 overflow-hidden group">
+              <img
+                src="https://photos.smugmug.com/Story-photos/i-QF3JkdL/0/S/01_IN_RAJ201312245041%20bazaar-S.jpg"
+                alt="Rural bazaar"
+                className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
+              />
+            </div>
+            <div className="md:col-span-7 overflow-hidden group">
+              <img
+                src="https://media.istockphoto.com/id/1680966487/photo/traditional-indian-street-market-in-jaisalmer.jpg?s=612x612&w=0&k=20&c=81edBlpiN1RxnpyP8luMjvZhLI5Gx8OxTHOJEJg6uFc="
+                alt="Traditional Indian street market"
+                className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
+              />
+            </div>
+          </div>
+        </FadeInSection>
+
+        <FadeInSection delay={750}>
+          <div className="border-t border-white/10 pt-16 md:pt-20">
+            <blockquote className="max-w-3xl">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-light leading-[1.3] tracking-[-0.02em] text-white/90">
+                Every handcrafted piece carries the weight of a story, the warmth of patience, and the hope of a better future.
+              </p>
+              <footer className="mt-8 text-xs tracking-[0.2em] uppercase text-white/40">
+                &mdash; Rural Bazaar
+              </footer>
+            </blockquote>
+          </div>
+        </FadeInSection>
+
       </div>
     </div>
   );
