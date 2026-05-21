@@ -25,7 +25,7 @@ const EntrepreneurProfile = ({ entrepreneur, reverseLayout = false }) => {
           "{entrepreneur.story}"
         </p>
         <Link
-          to={`/?entrepreneur=${entrepreneur.id}`}
+          to={`/shop?entrepreneur=${entrepreneur.id}`}
           className="inline-flex items-center px-6 py-3 text-xs tracking-[0.1em] uppercase text-[#1A1A1A] hover:text-white border border-[#1A1A1A] hover:bg-[#1A1A1A] transition-all duration-500"
         >
           Support {entrepreneur.name}

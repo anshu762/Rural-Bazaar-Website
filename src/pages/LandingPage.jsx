@@ -35,7 +35,7 @@ const LandingPage = () => {
     <div className="bg-[#FAF9F6] text-[#1A1A1A]">
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-black overflow-hidden">
+      <section className="relative min-h-[85vh] sm:min-h-[90vh] md:min-h-screen flex items-center bg-black overflow-hidden">
         <div className="absolute inset-0">
           {['herosection.jpg', 'herosection2.jpg', 'herosection3.jpg', 'herosection4.jpg'].map((img, i) => (
             <Motion.div
@@ -45,22 +45,22 @@ const LandingPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: [0, 1, 1, 0] }}
               transition={{
-                duration: 16,
+                duration: 12,
                 ease: 'easeInOut',
                 repeat: Infinity,
-                delay: i * 4,
+                delay: i * 3,
                 times: [0, 0.15, 0.7, 0.85],
               }}
             />
           ))}
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-14 py-24 md:py-32">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-10 lg:px-14 py-20 sm:py-24 md:py-32">
           <Motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.2 }}
-            className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/40 mb-6"
+            className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/40 mb-5 md:mb-6"
           >
             Rural Bazaar
           </Motion.p>
@@ -68,7 +68,7 @@ const LandingPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
-            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif font-light tracking-[-0.04em] text-white leading-[0.9] max-w-4xl"
+            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-serif font-light tracking-[-0.04em] text-white leading-[0.9] max-w-4xl"
           >
             Handcrafted<br />Stories From<br />Rural India
           </Motion.h1>
@@ -76,7 +76,7 @@ const LandingPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.6 }}
-            className="text-base md:text-lg font-light text-white/60 max-w-lg mt-8 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg font-light text-white/60 max-w-lg mt-6 sm:mt-8 leading-relaxed"
           >
             A global marketplace empowering women artisans in rural communities. Every purchase preserves heritage and transforms lives.
           </Motion.p>
@@ -84,15 +84,15 @@ const LandingPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1], delay: 0.8 }}
-            className="flex flex-wrap gap-4 mt-10"
+            className="flex flex-wrap gap-3 sm:gap-4 mt-8 sm:mt-10"
           >
             <Motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}>
-              <Link to="/shop" className="block px-8 py-3.5 text-xs tracking-[0.15em] uppercase text-black bg-white hover:bg-white/90 transition-colors duration-500">
+              <Link to="/shop" className="block px-6 sm:px-8 py-3 sm:py-3.5 text-xs tracking-[0.15em] uppercase text-black bg-white hover:bg-white/90 transition-colors duration-500">
                 Explore Collection
               </Link>
             </Motion.div>
             <Motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}>
-              <Link to="/about" className="block px-8 py-3.5 text-xs tracking-[0.15em] uppercase text-white border border-white/30 hover:border-white transition-colors duration-500">
+              <Link to="/about" className="block px-6 sm:px-8 py-3 sm:py-3.5 text-xs tracking-[0.15em] uppercase text-white border border-white/30 hover:border-white transition-colors duration-500">
                 Our Mission
               </Link>
             </Motion.div>
@@ -101,7 +101,7 @@ const LandingPage = () => {
       </section>
 
       {/* ─── BRAND STORY ─── */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 lg:py-40 px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <Motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -140,18 +140,18 @@ const LandingPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{}}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
-              className="absolute -bottom-6 -left-6 bg-[#FAF9F6] p-6 md:p-8 max-w-xs border border-[#E5E2DB]"
+              className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-[#FAF9F6] p-5 sm:p-6 md:p-8 max-w-[200px] sm:max-w-xs border border-[#E5E2DB]"
             >
-              <p className="text-3xl md:text-4xl font-serif font-light text-[#1A1A1A]">11+</p>
-              <p className="text-xs tracking-[0.1em] uppercase text-[#6B6B6B] mt-2">Artisans Empowered</p>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-light text-[#1A1A1A]">11+</p>
+              <p className="text-[10px] sm:text-xs tracking-[0.1em] uppercase text-[#6B6B6B] mt-1.5 sm:mt-2">Artisans Empowered</p>
             </Motion.div>
           </Motion.div>
         </div>
       </section>
 
       {/* ─── FEATURED ENTREPRENEURS ─── */}
-      <section className="py-24 md:py-32 lg:py-40 bg-[#F5F3EE]">
-        <div className="px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 lg:py-40 bg-[#F5F3EE]">
+        <div className="px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
           <SectionHeading
             label="The Artisans"
             title="Meet the Makers"
@@ -197,7 +197,7 @@ const LandingPage = () => {
       </section>
 
       {/* ─── FEATURED PRODUCTS ─── */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 lg:py-40 px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
         <SectionHeading
           label="The Collection"
           title="Featured Products"
@@ -259,9 +259,9 @@ const LandingPage = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className="py-24 md:py-32 bg-black text-white"
+        className="py-20 md:py-32 bg-black text-white"
       >
-        <div className="px-6 md:px-10 lg:px-14 max-w-7xl mx-auto text-center">
+        <div className="px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto text-center">
           <Motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -311,7 +311,7 @@ const LandingPage = () => {
       </Motion.section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 lg:py-40 px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
         <SectionHeading
           label="The Process"
           title="How It Works"
@@ -347,8 +347,8 @@ const LandingPage = () => {
       </section>
 
       {/* ─── TESTIMONIALS ─── */}
-      <section className="py-24 md:py-32 lg:py-40 bg-[#F5F3EE]">
-        <div className="px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 lg:py-40 bg-[#F5F3EE]">
+        <div className="px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
           <SectionHeading
             label="Community Voices"
             title="Words That Matter"
@@ -385,7 +385,7 @@ const LandingPage = () => {
       </section>
 
       {/* ─── NEWSLETTER CTA ─── */}
-      <section className="py-24 md:py-32 lg:py-40 px-6 md:px-10 lg:px-14 max-w-7xl mx-auto text-center">
+      <section className="py-20 md:py-32 lg:py-40 px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto text-center">
         <Motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -429,9 +429,9 @@ const LandingPage = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ margin: '-60px' }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className="py-24 md:py-32 lg:py-40 bg-black"
+        className="py-20 md:py-32 lg:py-40 bg-black"
       >
-        <div className="px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
+        <div className="px-5 sm:px-6 md:px-10 lg:px-14 max-w-7xl mx-auto">
           <Motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

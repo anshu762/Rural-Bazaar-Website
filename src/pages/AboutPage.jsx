@@ -65,28 +65,28 @@ const AboutPage = () => {
 
         <FadeInSection delay={600}>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-32">
-            <div className="md:col-span-7 overflow-hidden group">
+            <div className="md:col-span-7 overflow-hidden group aspect-[4/3] md:aspect-auto">
               <img
                 src="https://photos.smugmug.com/Story-photos/i-tN9FqDv/0/S/04_IN_RAJ201312244966%20bulls-S.jpg"
                 alt="Rural life"
                 className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
               />
             </div>
-            <div className="md:col-span-5 overflow-hidden group">
+            <div className="md:col-span-5 overflow-hidden group aspect-[4/3] md:aspect-auto">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Surunga_haat6.JPG"
                 alt="Local marketplace"
                 className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
               />
             </div>
-            <div className="md:col-span-5 overflow-hidden group">
+            <div className="md:col-span-5 overflow-hidden group aspect-[4/3] md:aspect-auto">
               <img
                 src="https://photos.smugmug.com/Story-photos/i-QF3JkdL/0/S/01_IN_RAJ201312245041%20bazaar-S.jpg"
                 alt="Rural bazaar"
                 className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:brightness-[0.9] group-hover:scale-105 transition-all duration-700 ease-out"
               />
             </div>
-            <div className="md:col-span-7 overflow-hidden group">
+            <div className="md:col-span-7 overflow-hidden group aspect-[4/3] md:aspect-auto">
               <img
                 src="https://media.istockphoto.com/id/1680966487/photo/traditional-indian-street-market-in-jaisalmer.jpg?s=612x612&w=0&k=20&c=81edBlpiN1RxnpyP8luMjvZhLI5Gx8OxTHOJEJg6uFc="
                 alt="Traditional Indian street market"

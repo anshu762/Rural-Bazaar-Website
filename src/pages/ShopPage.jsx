@@ -145,7 +145,7 @@ const ShopPage = () => {
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-14">
         <aside className="w-full lg:w-56 xl:w-64 flex-shrink-0">
           <div className="lg:sticky lg:top-28">
-            <div className="border border-[#E3DFD7] p-6">
+            <div className="border border-[#E3DFD7] p-5 sm:p-6">
               <CategoryFilter
                 categories={categories}
                 selectedCategory={selectedCategory}

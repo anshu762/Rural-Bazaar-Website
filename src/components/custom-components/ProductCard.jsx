@@ -32,15 +32,15 @@ const StoryModal = ({ story, entrepreneur, product, onClose }) => {
           </div>
         )}
 
-        <div className="p-8 md:p-12">
-          <div className="flex items-center gap-5 mb-8">
+        <div className="p-5 sm:p-8 md:p-12">
+          <div className="flex items-center gap-4 sm:gap-5 mb-6 sm:mb-8">
             <img 
               src={entrepreneur.profileImageUrl} 
               alt={entrepreneur.name}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover"
+              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover"
             />
             <div>
-              <h3 className="text-2xl md:text-3xl font-serif font-light tracking-[-0.02em] text-[#1A1A1A]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-light tracking-[-0.02em] text-[#1A1A1A]">
                 {entrepreneur.name}
               </h3>
               <p className="text-xs tracking-[0.05em] uppercase text-[#9C9C9C] mt-1">{product.name}</p>
