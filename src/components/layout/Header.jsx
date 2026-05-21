@@ -19,7 +19,7 @@ const Header = () => {
         </NavLink>
 
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          <NavLink to="/" className={navLinkClass}>Products</NavLink>
+          <NavLink to="/shop" className={navLinkClass}>Products</NavLink>
           <span className="w-[1px] h-3 bg-[#D4D1CB]" />
           <NavLink to="/entrepreneurs" className={navLinkClass}>Entrepreneurs</NavLink>
           <span className="w-[1px] h-3 bg-[#D4D1CB]" />
@@ -41,7 +41,7 @@ const Header = () => {
         <div className="border-t border-[#EBE8E2] bg-[#FDFBF5]">
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 flex flex-col space-y-6">
             <NavLink
-              to="/"
+              to="/shop"
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) =>
                 `text-sm tracking-[0.15em] uppercase transition-all duration-500 ${isActive ? 'text-[#1A1A1A]' : 'text-[#8A8A8A] hover:text-[#1A1A1A]'}`
