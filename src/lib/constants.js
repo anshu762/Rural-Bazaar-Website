@@ -270,7 +270,7 @@ export const products = [
     name: 'Handcrafted Clay Idol',
     price: 250,
     category: 'Handicrafts',
-    imageUrl: '/placeholder-product.webp',
+    imageUrl: '/Mahima.jpeg',
     entrepreneurId: 12,
   },
   {
@@ -278,7 +278,7 @@ export const products = [
     name: 'Tanjore Painting (Medium)',
     price: 2200,
     category: 'Art',
-    imageUrl: '/placeholder-product.webp',
+    imageUrl: '/Ishitha.jpeg',
     entrepreneurId: 13,
   },
   {
@@ -326,7 +326,7 @@ export const products = [
     name: 'Handmade Soft Teddy Toy',
     price: 150,
     category: 'Handicrafts',
-    imageUrl: '/placeholder-product.webp',
+    imageUrl: '/Malika.jpeg',
     entrepreneurId: 19,
   },
   {
@@ -334,7 +334,7 @@ export const products = [
     name: 'Designer Stone Ring',
     price: 100,
     category: 'Jewellery',
-    imageUrl: '/placeholder-product.webp',
+    imageUrl: '/Kalyani.jpeg',
     entrepreneurId: 20,
   },
   {
@@ -342,7 +342,7 @@ export const products = [
     name: 'Silk Dupatta',
     price: 450,
     category: 'Handicrafts',
-    imageUrl: '/placeholder-product.webp',
+    imageUrl: '/Amrusha.jpeg',
     entrepreneurId: 21,
   },
 ];
