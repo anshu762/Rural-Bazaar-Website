@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { WhatsAppIcon } from './icons';
 
+const AvatarFallback = ({ name, className }) => (
+  <div className={`${className} flex items-center justify-center bg-[#E3DFD7] text-[#1A1A1A] font-serif font-light`}>
+    {name.charAt(0).toUpperCase()}
+  </div>
+);
+
 const StoryModal = ({ story, entrepreneur, product, onClose }) => {
   return createPortal(
     <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4" onClick={onClose}>
@@ -34,11 +40,15 @@ const StoryModal = ({ story, entrepreneur, product, onClose }) => {
 
         <div className="p-5 sm:p-8 md:p-12">
           <div className="flex items-center gap-4 sm:gap-5 mb-6 sm:mb-8">
-            <img 
-              src={entrepreneur.profileImageUrl} 
-              alt={entrepreneur.name}
-              className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover"
-            />
+            {entrepreneur.profileImageUrl === '/placeholder-entrepreneur.webp' ? (
+              <AvatarFallback name={entrepreneur.name} className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full text-lg sm:text-xl md:text-2xl" />
+            ) : (
+              <img 
+                src={entrepreneur.profileImageUrl} 
+                alt={entrepreneur.name}
+                className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full object-cover"
+              />
+            )}
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-light tracking-[-0.02em] text-[#1A1A1A]">
                 {entrepreneur.name}

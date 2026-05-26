@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const AvatarFallback = ({ name }) => (
+  <div className="w-48 h-48 md:w-56 md:h-56 flex items-center justify-center bg-[#E3DFD7] text-[#1A1A1A] text-6xl md:text-7xl font-serif font-light transition-all duration-700 ease-out hover:scale-105">
+    {name.charAt(0).toUpperCase()}
+  </div>
+);
+
 const EntrepreneurProfile = ({ entrepreneur, reverseLayout = false }) => {
+  const [imgError, setImgError] = useState(false);
+  const isPlaceholder = entrepreneur.profileImageUrl === '/placeholder-entrepreneur.webp';
   const layoutClasses = reverseLayout ? 'md:flex-row-reverse' : 'md:flex-row';
 
   return (
@@ -10,11 +18,16 @@ const EntrepreneurProfile = ({ entrepreneur, reverseLayout = false }) => {
     >
       <div className="w-full md:w-1/3 flex-shrink-0 text-center">
         <div className="relative overflow-hidden inline-block">
-          <img
-            src={entrepreneur.profileImageUrl}
-            alt={entrepreneur.name}
-            className="w-48 h-48 md:w-56 md:h-56 object-cover transition-all duration-700 ease-out hover:scale-105"
-          />
+          {isPlaceholder || imgError ? (
+            <AvatarFallback name={entrepreneur.name} />
+          ) : (
+            <img
+              src={entrepreneur.profileImageUrl}
+              alt={entrepreneur.name}
+              className="w-48 h-48 md:w-56 md:h-56 object-cover transition-all duration-700 ease-out hover:scale-105"
+              onError={() => setImgError(true)}
+            />
+          )}
         </div>
         <h2 className="text-3xl md:text-4xl font-serif font-light tracking-[-0.02em] text-[#1A1A1A] mt-6">
           {entrepreneur.name}
