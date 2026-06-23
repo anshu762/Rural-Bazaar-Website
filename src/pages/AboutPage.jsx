@@ -26,6 +26,20 @@ const AboutPage = () => {
         </FadeInSection>
 
         <FadeInSection delay={300}>
+          <div className="max-w-4xl mb-24">
+            <p className="text-base md:text-lg leading-[1.9] tracking-[0.01em] text-white/80">
+              Rural Bazaar is a digital bridge between rural women entrepreneurs and a market that has long been out of their reach.
+            </p>
+            <p className="text-base md:text-lg leading-[1.9] tracking-[0.01em] text-white/80 mt-6">
+              For generations, the skill and dedication of these women have remained confined to their immediate surroundings, limited by geography rather than talent. Rural Bazaar exists to change that boundary, giving every artisan the chance to be seen and valued by customers far beyond her village.
+            </p>
+            <p className="text-base md:text-lg leading-[1.9] tracking-[0.01em] text-white/80 mt-6">
+              This is more than an online marketplace, it allows rural women to tell their own stories, showcase their craft on their own terms, and build a livelihood that reflects the true worth of their work. Every purchase made through Rural Bazaar is a step toward narrowing the distance between rural talent and the wider world that deserves to discover it and connect with a wider market.
+            </p>
+          </div>
+        </FadeInSection>
+
+        <FadeInSection delay={450}>
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 mb-24">
             <p className="text-sm md:text-base leading-[1.8] tracking-[0.01em] text-white/70 max-w-md">
               Rural Bazaar began with a simple observation &mdash; extraordinary talent,
@@ -42,7 +56,7 @@ const AboutPage = () => {
           </div>
         </FadeInSection>
 
-        <FadeInSection delay={450}>
+        <FadeInSection delay={600}>
           <div className="flex flex-col sm:flex-row gap-6 mb-32">
             <a
               href="mailto:divenachugani@gmail.com"
@@ -63,7 +77,7 @@ const AboutPage = () => {
           </div>
         </FadeInSection>
 
-        <FadeInSection delay={600}>
+        <FadeInSection delay={750}>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-32">
             <div className="md:col-span-7 overflow-hidden group aspect-[4/3] md:aspect-auto">
               <img
@@ -96,7 +110,7 @@ const AboutPage = () => {
           </div>
         </FadeInSection>
 
-        <FadeInSection delay={750}>
+        <FadeInSection delay={900}>
           <div className="border-t border-white/10 pt-16 md:pt-20">
             <blockquote className="max-w-3xl">
               <p className="text-2xl md:text-3xl lg:text-4xl font-light leading-[1.3] tracking-[-0.02em] text-white/90">

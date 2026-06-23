@@ -288,8 +288,8 @@ const LandingPage = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8"
           >
             {[
-              { number: '11+', label: 'Artisans Empowered' },
-              { number: '50+', label: 'Products Crafted' },
+              { number: '30+', label: 'Artisans Empowered' },
+              { number: '80+', label: 'Products Crafted' },
               { number: '5+', label: 'Villages Connected' },
               { number: '100%', label: 'Handmade with Love' },
             ].map((stat) => (
