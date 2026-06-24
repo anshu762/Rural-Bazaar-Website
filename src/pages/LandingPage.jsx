@@ -142,7 +142,7 @@ const LandingPage = () => {
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
               className="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-[#FAF9F6] p-5 sm:p-6 md:p-8 max-w-[200px] sm:max-w-xs border border-[#E5E2DB]"
             >
-              <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-light text-[#1A1A1A]">11+</p>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-light text-[#1A1A1A]">30+</p>
               <p className="text-[10px] sm:text-xs tracking-[0.1em] uppercase text-[#6B6B6B] mt-1.5 sm:mt-2">Artisans Empowered</p>
             </Motion.div>
           </Motion.div>
